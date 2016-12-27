@@ -22,14 +22,9 @@ var SearchContainer = React.createClass({
       searchField: ''
     });
     
-    if (searchField.length > 0 && searchField !== this.context.router.params.searchField) {
-      this.context.router.replace({
-        pathname: '/forecast/' + this.state.searchField,
-        state: {
-          searchField: searchField
-        }
-      });
-    }
+    if (searchField.length > 0) {
+      this.context.router.push('/forecast/' + this.state.searchField);
+    }  
   },
   render () {
     return (
