@@ -14,7 +14,12 @@ var ForecastContainer = React.createClass({
     }
   },
   componentDidMount() {
-    var location = this.props.location.state.searchField;
+    this.makeRequest(this.props.params.searchField)
+  },
+  componentWillReceiveProps: function (nextProps) {
+    this.makeRequest(nextProps.routeParams.searchField);
+  },
+  makeRequest(location) {
     weatherHelper.getForecast(location)
       .then((val) => {
         console.log(val);
@@ -24,8 +29,6 @@ var ForecastContainer = React.createClass({
         })
       })
       .catch((err) => console.log(err));
-
-
   },
   render: function() {
     return (
