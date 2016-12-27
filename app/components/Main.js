@@ -7,13 +7,13 @@ var Main = React.createClass({
     return (
       <div>
         <div className="navbar navbar-default">
-          <div className="container-fluid">
+          <div className="container">
             <div className="navbar-header">
-              <div className="navbar=brand">
-                <h1>ReactJS Weather App</h1>
-              </div>
+              <h1>ReactJS Weather App</h1>
             </div>
-            <Search />
+            <div className="navbar-right">
+              <Search />
+            </div>
           </div>
         </div>
         {this.props.children}

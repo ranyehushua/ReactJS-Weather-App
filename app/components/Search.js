@@ -1,12 +1,21 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 
+var styles = {
+  search: {
+    margin: '18px'
+  },
+  input: {
+    marginRight: '10px'
+  }
+}
+
 function Search(props) {
   return (
-    <div>
+    <div style={styles.search}>
       <form className="form-inline" onSubmit={props.onSubmitUser}>
         <div className="form-group">
-          <input type="text" className="form-control" value={props.searchField} placeholder="Search Local Weather" onChange={props.onUpdateUser} />
+          <input type="text" className="form-control" style={styles.input} value={props.searchField} placeholder="Search Local Weather" onChange={props.onUpdateUser} />
         </div>
         <button type="submit" className="btn btn-success">Get Weather</button>
       </form>
