@@ -10,7 +10,7 @@ var routes = React.createClass({
         <Router history={hashHistory}>
           <Route path='/' component={Main}>
             <IndexRoute component={Home} />
-            <Route path='/forecast/:searchField' component={Forecast} />
+            <Route path='forecast/:searchField' component={Forecast} />
           </Route>
         </Router>
     )
