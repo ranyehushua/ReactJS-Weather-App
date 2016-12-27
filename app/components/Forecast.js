@@ -3,6 +3,14 @@ var PropTypes = React.PropTypes;
 var Loading = require('./Loading');
 var Day = require('./Day');
 
+var styles = {
+  days: {
+    display: 'inline-block',
+    padding: '10px',
+    margin: '10px'
+  }
+}
+
 var Forecast = React.createClass({
   propTypes: {
     forecastInfo: PropTypes.array.isRequired,
@@ -14,10 +22,14 @@ var Forecast = React.createClass({
     : ( <div>
           <h1 className='text-center'>{this.props.forecastInfo[0]}</h1>
           <h3 className='text-center'>Select a Day</h3>
-          <div>
+          <div className="text-center">
             {this.props.forecastInfo.map((day, i) => {
               if (i !== 0) {
-                return <Day icon={day.icon} date={day.date} key={i} />
+                return (
+                  <div style={styles.days}>
+                    <Day icon={day.icon} date={day.date} key={i} />
+                  </div>
+                )
               }
             })}
           </div>

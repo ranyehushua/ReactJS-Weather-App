@@ -8,7 +8,7 @@ var Day = React.createClass({
   },
   render: function() {
     return (
-      <div>
+      <div className="text-center">
         <img src={'http://openweathermap.org/img/w/' + this.props.icon + '.png'} />
         <p>{this.props.date}</p>
       </div>
