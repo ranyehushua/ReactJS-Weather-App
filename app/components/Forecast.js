@@ -27,8 +27,8 @@ var Forecast = React.createClass({
             {this.props.forecastInfo.map((day, i) => {
               if (i !== 0) {
                 return (
-                  <div style={styles.days}>
-                    <a onClick={this.props.getDetails.bind(null, day)}><Day icon={day.icon} date={day.date} key={i} /></a>
+                  <div style={styles.days} key={i}>
+                    <a onClick={this.props.getDetails.bind(null, day)} key={i}><Day icon={day.icon} date={day.date} key={i} /></a>
                   </div>
                 )
               }
