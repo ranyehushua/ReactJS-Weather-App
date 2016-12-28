@@ -2,11 +2,15 @@ var React = require('react');
 var Details = require('../components/Details');
 
 var DetailsContainer = React.createClass({
-
+  getInitialState() {
+    return {
+      forecast: this.props.location.state.forecast
+    }
+  },
   render: function() {
-    console.log(this.props);
+    console.log(this.state.forecast);
     return (
-      <Details />
+      <Details forecast={this.state.forecast}/>
     );
   }
 
