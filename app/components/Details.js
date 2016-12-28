@@ -10,6 +10,13 @@ function capitalizeFirst (string) {
   return transform.join(' ');
 }
 
+var styles = {
+  text: {
+    fontSize: '1.1em',
+    color: '#0CC'
+  }
+}
+
 var Details = React.createClass({
   propTypes: {
     forecast: PropTypes.object.isRequired
@@ -18,11 +25,13 @@ var Details = React.createClass({
     return (
       <div className='text-center'>
         <Day icon={this.props.forecast.icon} date={this.props.forecast.date} />
-        <p>{this.props.forecast.city}</p>
-        <p>{capitalizeFirst(this.props.forecast.desc)}</p>
-        <p>Min Temp: {Math.round(this.props.forecast.min)}&deg; F</p>
-        <p>Max Temp: {Math.round(this.props.forecast.max)}&deg; F</p>
-        <p>Humidity: {this.props.forecast.humidity}</p>
+        <div style={styles.text}>
+          <p>{this.props.forecast.city}</p>
+          <p>{capitalizeFirst(this.props.forecast.desc)}</p>
+          <p>Min Temp: {Math.round(this.props.forecast.min)}&deg; F</p>
+          <p>Max Temp: {Math.round(this.props.forecast.max)}&deg; F</p>
+          <p>Humidity: {this.props.forecast.humidity}</p>
+        </div>
       </div>
     );
   }

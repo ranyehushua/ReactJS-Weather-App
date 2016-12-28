@@ -7,7 +7,11 @@ var styles = {
   days: {
     display: 'inline-block',
     padding: '10px',
-    margin: '10px'
+    margin: '5px'
+  },
+  link: {
+    textDecoration: 'none',
+    cursor: 'pointer'
   }
 }
 
@@ -28,7 +32,7 @@ var Forecast = React.createClass({
               if (i !== 0) {
                 return (
                   <div style={styles.days} key={i}>
-                    <a onClick={this.props.getDetails.bind(null, day)} key={i}><Day icon={day.icon} date={day.date} key={i} /></a>
+                    <a style={styles.link} onClick={this.props.getDetails.bind(null, day)} key={i}><Day icon={day.icon} date={day.date} key={i} /></a>
                   </div>
                 )
               }
