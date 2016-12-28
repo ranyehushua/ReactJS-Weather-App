@@ -30,11 +30,20 @@ var ForecastContainer = React.createClass({
       })
       .catch((err) => console.log(err));
   },
+  setDetailsState(forecast) {
+    this.context.router.replace({
+      pathname: '/details/' + forecast.city,
+      state: {
+        forecast: forecast
+      }
+    });
+  },
   render: function() {
     return (
       <Forecast 
         isLoading = {this.state.isLoading}
         forecastInfo = {this.state.forecastInfo}
+        getDetails = {this.setDetailsState}
       />
     );
   }

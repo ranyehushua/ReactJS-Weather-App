@@ -14,7 +14,8 @@ var styles = {
 var Forecast = React.createClass({
   propTypes: {
     forecastInfo: PropTypes.array.isRequired,
-    isLoading: PropTypes.bool.isRequired
+    isLoading: PropTypes.bool.isRequired,
+    getDetails: PropTypes.func.isRequired
   },
   render: function() {
     return this.props.isLoading === true
@@ -27,7 +28,7 @@ var Forecast = React.createClass({
               if (i !== 0) {
                 return (
                   <div style={styles.days}>
-                    <Day icon={day.icon} date={day.date} key={i} />
+                    <a onClick={this.props.getDetails.bind(null, day)}><Day icon={day.icon} date={day.date} key={i} /></a>
                   </div>
                 )
               }
