@@ -22,7 +22,6 @@ var ForecastContainer = React.createClass({
   makeRequest(location) {
     weatherHelper.getForecast(location)
       .then((val) => {
-        console.log(val);
         this.setState({
           isLoading: false,
           forecastInfo: val
@@ -31,7 +30,7 @@ var ForecastContainer = React.createClass({
       .catch((err) => console.log(err));
   },
   setDetailsState(forecast) {
-    this.context.router.replace({
+    this.context.router.push({
       pathname: '/details/' + forecast.city,
       state: {
         forecast: forecast
