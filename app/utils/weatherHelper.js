@@ -35,6 +35,9 @@ var weatherHelper = {
     return callWeather(location)
       .then(function (response) {
         var reply = parseForecast(response.data.list);
+        reply.forEach((day) => {
+          day.city = response.data.city.name;
+        });
         reply.unshift(response.data.city.name);
         return reply;
       })
