@@ -3,6 +3,7 @@ import { Router, Route, IndexRoute, hashHistory, browserHistory } from 'react-ro
 import Main from '../components/Main'
 import Home from '../components/Home'
 import Forecast from '../containers/ForecastContainer'
+import Details from '../containers/DetailsContainer'
 
 var routes = React.createClass({
   render() {
@@ -11,6 +12,7 @@ var routes = React.createClass({
           <Route path='/' component={Main}>
             <IndexRoute component={Home} />
             <Route path='forecast/:searchField' component={Forecast} />
+            <Route path='details/:searchField' component={Details} />
           </Route>
         </Router>
     )
