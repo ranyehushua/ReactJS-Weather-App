@@ -20,8 +20,8 @@ var Details = React.createClass({
         <Day icon={this.props.forecast.icon} date={this.props.forecast.date} />
         <p>{this.props.forecast.city}</p>
         <p>{capitalizeFirst(this.props.forecast.desc)}</p>
-        <p>Min Temp: {this.props.forecast.min}</p>
-        <p>Max Temp: {this.props.forecast.max}</p>
+        <p>Min Temp: {Math.round(this.props.forecast.min)}&deg; F</p>
+        <p>Max Temp: {Math.round(this.props.forecast.max)}&deg; F</p>
         <p>Humidity: {this.props.forecast.humidity}</p>
       </div>
     );
