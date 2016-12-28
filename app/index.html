@@ -5,8 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>React Weather App</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    html {
+    position: relative;
+    min-height: 100%;
+    }
+    body {
+        margin: 0 0 50px; /* bottom = footer height */
+    }
+    footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>
+  <footer>
+    <p>Find the source code for this project on <a href='https://github.com/ranyehushua/ReactJS-Weather-App'>Github</a></p>
+  </footer>
 </body>
 </html>
