@@ -7,7 +7,7 @@ var Main = React.createClass({
   render: function() {
     return (
       <div>
-        <div className="navbar navbar-default navbar-fixed-top" style={{marginBottom: '0px', minWidth: '230px'}}>
+        <div className="navbar navbar-inverse navbar-fixed-top" style={{marginBottom: '0px', minWidth: '230px'}}>
           <div className="container">
             <div className="navbar-header">
               <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">

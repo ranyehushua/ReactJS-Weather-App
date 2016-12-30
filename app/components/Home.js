@@ -14,7 +14,10 @@ var styles = {
   jumbo: {
     position: 'relative',
     top: '50%',
-    transform: 'translateY(-50%)'
+    transform: 'translateY(-50%)',
+    borderRadius: '10px',
+    border: '1px solid rgba(255, 255, 255, .5)',
+    background: 'rgba(50, 50, 50, .5)'
   },
   git: {
     position: 'relative'
@@ -26,7 +29,7 @@ var Home = React.createClass({
   render: function() {
     return (
       <div style={styles.body}>
-        <div className='jumbotron text-center col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2' style={styles.jumbo}>
+        <div className='jumbotron text-center col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3' style={styles.jumbo}>
           <Search />
         </div>
         
