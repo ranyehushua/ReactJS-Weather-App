@@ -2,9 +2,6 @@ var React = require('react');
 var PropTypes = React.PropTypes;
 
 var styles = {
-  search: {
-    margin: '18px'
-  },
   input: {
     marginRight: '10px'
   }
@@ -12,7 +9,7 @@ var styles = {
 
 function Search(props) {
   return (
-    <div style={styles.search}>
+    <div>
       <form className="form-inline" onSubmit={props.onSubmitUser}>
         <div className="form-group">
           <input type="text" className="form-control" style={styles.input} value={props.searchField} placeholder="Search Local Weather" onChange={props.onUpdateUser} />
