@@ -6,7 +6,7 @@ var Main = React.createClass({
   render: function() {
     return (
       <div>
-        <div className="navbar navbar-default">
+        <div className="navbar navbar-default" style={{marginBottom: '0px'}}>
           <div className="container">
             <div className="navbar-header">
               <h1>ReactJS Weather App</h1>
