@@ -15,7 +15,7 @@ var styles = {
   },
   header: {
     marginTop: '0',
-    paddingTop: '20px'
+    paddingTop: '30px'
   }
 }
 

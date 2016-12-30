@@ -14,6 +14,9 @@ var styles = {
   text: {
     fontSize: '1.1em',
     color: '#0CC'
+  },
+  wrapper: {
+    paddingTop: '30px'
   }
 }
 
@@ -23,7 +26,7 @@ var Details = React.createClass({
   },
   render: function() {
     return (
-      <div className='text-center'>
+      <div className='text-center' style={styles.wrapper}>
         <Day icon={this.props.forecast.icon} date={this.props.forecast.date} />
         <div style={styles.text}>
           <p>{this.props.forecast.city}</p>
