@@ -14,8 +14,10 @@ var styles = {
     cursor: 'pointer'
   },
   header: {
-    marginTop: '0',
-    paddingTop: '30px'
+    marginTop: '0'
+  },
+  wrapper: {
+    padding: '30px 0 60px'
   }
 }
 
@@ -28,7 +30,7 @@ var Forecast = React.createClass({
   render: function() {
     return this.props.isLoading === true
     ? <Loading speed={500} text="One Moment Please" />
-    : ( <div>
+    : ( <div style={styles.wrapper}>
           <h1 className='text-center' style={styles.header}>{this.props.forecastInfo[0]}</h1>
           <h3 className='text-center'>Select a Day</h3>
           <div className="text-center">
