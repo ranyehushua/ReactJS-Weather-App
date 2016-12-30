@@ -38,6 +38,7 @@ var weatherHelper = {
         reply.forEach((day) => {
           day.city = response.data.city.name;
         });
+        //City name is placed at first position in the array, just in case user mispells city name
         reply.unshift(response.data.city.name);
         return reply;
       })
