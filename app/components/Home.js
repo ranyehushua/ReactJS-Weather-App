@@ -13,7 +13,7 @@ var styles = {
   },
   jumbo: {
     position: 'relative',
-    top: '50%',
+    top: 'calc(50% - 25px)',
     transform: 'translateY(-50%)',
     borderRadius: '10px',
     border: '1px solid rgba(255, 255, 255, .5)',
